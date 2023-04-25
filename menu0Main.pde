@@ -50,6 +50,7 @@ public void bptreeButton() {
   impStr = "B+ Tree";
 }
 public void startButton() {
+  loading = false;
   click.play();
   proceed.play();
   println("Starting");
