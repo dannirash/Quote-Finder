@@ -1,3 +1,5 @@
+// Copyright [2023] <Dany Rashwan>
+
 import controlP5.*;
 import processing.sound.*;
 import java.io.IOException;
@@ -9,9 +11,7 @@ SoundFile background, proceed, back, click, click2, click2REV, pageFlip, type;
 //images
 PImage[] bgd, mapButton, bptreeButton, searchButton, randomButton, startButton, backButton, nextArrowButton, backArrowButton;
 //quotes
-String[] quotesStr= {"An investment in André Gide pays the best interest. "
-  , "Education is the ability to listen to almost anything without losing your temper or your self-confidence."
-  , "Education is the movement from darkness to light."};
+String[] quotesStr= {""};
 String impStr;
 //dropdownList
 DropdownList categoriesList;
@@ -85,11 +85,7 @@ void loadFiles() {
   defaultFont = createFont("Arial", 25, true);
   quoteFont = new ControlFont(createFont("Arial", 30, true), 30);
   
-  if(debug)
-    tmp = createWriter("C:\\Users\\danni\\OneDrive - University of Florida\\Spring23\\COP3530\\Projects\\Project3\\src\\QuoteFinder\\data\\backend\\output.txt");
-  else
-    tmp = createWriter("C:\\Program Files (x86)\\QuoteFinder\\windows-amd64\\data\\backend\\output.txt");
-  
+  tmp = createWriter("C:\\Program Files (x86)\\QuoteFinder\\windows-amd64\\data\\backend\\output.txt");
   tmp.print("loading... please try again in a second :)");
   tmp.close();
   outputTxt = loadStrings("backend/output.txt");
