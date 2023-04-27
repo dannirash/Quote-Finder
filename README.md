@@ -9,10 +9,16 @@ Team Members: Dany Rashwan, Robert Kilkenny, Jane Seo
 
 ![resultMenu](https://user-images.githubusercontent.com/61055337/234738188-3c217c21-dd7f-47dd-b893-fbaf5958ffff.png)
 
-Problem: 
+
+<details>
+<summary>Problem:>
+
 It is often difficult to find a relatable quote to a certain situation on the spot. We are often faced with this problem in storyboarding, workshopping, 
 or just regular conversing. Also, sometimes when we want to quote a prominent figure, we could be faced with this problem and would need to search several websites
 for a specific quote.
+
+</details>
+
 
 Motivation: 
 One issue that stands out when brainstorming ideas is accessibility for certain words or tools. Therefore, our motivation for this application is to ease the access
