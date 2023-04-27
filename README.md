@@ -3,6 +3,12 @@ An application to find Quotes
 
 Team Members: Dany Rashwan, Robert Kilkenny, Jane Seo
 
+![mainMenu](https://user-images.githubusercontent.com/61055337/234738135-e9098945-8e31-4611-bf47-10cde0ba14a4.png)
+
+![searchMenu](https://user-images.githubusercontent.com/61055337/234738175-d09a6355-b4bd-448c-8eca-3951a2d59840.png)
+
+![resultMenu](https://user-images.githubusercontent.com/61055337/234738188-3c217c21-dd7f-47dd-b893-fbaf5958ffff.png)
+
 Problem: 
 It is often difficult to find a relatable quote to a certain situation on the spot. We are often faced with this problem in storyboarding, workshopping, 
 or just regular conversing. Also, sometimes when we want to quote a prominent figure, we could be faced with this problem and would need to search several websites
