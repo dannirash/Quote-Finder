@@ -1,3 +1,5 @@
+// Copyright [2023] <Dany Rashwan>
+
 void mainMenu() {
   background(bgd[0]);
   fill(255);
