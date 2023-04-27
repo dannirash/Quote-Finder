@@ -64,7 +64,7 @@ Comment on What Each Members Learned Through This Process:
 ·        Dany Rashwan: Overall this has been a great experience. It was interesting to connect Java and C++ for the front and back end respectively. 
                         It was my first time doing so and doing it with this team definitely aided my experience and taught me a lot.
                         
-·        Robert Kilkenny: 
+·        Robert Kilkenny: The part I learned the most from was developing an algorithm to clean the data. The quotes had many different characters and the ways it was                           stored made it harder to work with the data, so I really saw how important it was to understand how the data is held to make that work.                                 Working with Dany was pretty easy since our code only interacted with each other via the text file, which made it much more attainable in the                           short time frame we had.
 
 ·        Jane Seo: I learned that I need to be more actively involved in group projects. For the technical part, I learned how the front end and back end are combined. 
 
