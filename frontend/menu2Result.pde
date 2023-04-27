@@ -1,3 +1,5 @@
+// Copyright [2023] <Dany Rashwan>
+
 void resultMenu() {
   quoteStr = outputTxt[currQuote];//quotesStr[currQuote];
   quoteTxt.setText(quoteStr);
