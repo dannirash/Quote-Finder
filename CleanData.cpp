@@ -9,12 +9,14 @@ using namespace std;
 string GetPiece(ifstream* input);
 void CleanData();
 
+//Algorithm created to get rid of categories that only appear a few times
 void CleanData()
 {
     ifstream input;
     ofstream output;
     input.open("quotes.csv");    
     
+    //Remove the line that shows the formating of the database
     string read;
     getline(input, read, '\n');
     std::cout << "Format: " << read << "\n\n*";
@@ -24,6 +26,7 @@ void CleanData()
     map<string, pair<string, vector<string>>> allInfo;
     map<string, int> categoryInfo;
 
+    //Loop while there is still data in the file
     while (true)
     {
         string quote = GetPiece(&input);
@@ -31,17 +34,16 @@ void CleanData()
         string temp;
         vector<string> categories;
 
-        if (quote == "")
-            break;
-
-
         allInfo[quote] = make_pair(author, categories);
         getline(input, temp, '\n');
 
+        //If there were more than one categories, they were surrounded in quotes so I made a check
         if (temp[0] == '"')
         {
             temp = temp.substr(1, temp.size() - 2);
             int start = 0;
+
+            //Go through the list of categories and store each of them
             while (true)
             {
                 int end = temp.find(',', start);
@@ -66,6 +68,7 @@ void CleanData()
             }
         }
 
+        // Else, there is only one category and I stored the whole quote
         else
         {
             allInfo[quote].second.push_back(temp);
@@ -87,20 +90,22 @@ void CleanData()
                 std::cout << "\n\n";
             counter++;
         }*/
-        if (index % 50000 == 0)
-            std::cout << "Index at " << index << "\n*";
+        /*if (index % 50000 == 0)
+            std::cout << "Index at " << index << "\n*";*/
+        //index++;
         
-        index++;
-        if (index == 392170)
+        if (input.eof())
             break;
     }
     input.close();
     std::cout << "Finished reading input!\n\n";
 
+    //Iterate through all given categories to see if they are referenced enough times to be used
     map<string, bool> allowedCategories;
     for (pair<string, int> count : categoryInfo)
         allowedCategories[count.first] = minimumReferences < count.second;
 
+    //Print out valid categories we will use in a file so Dany can add them to the list in QuoteFinder
     int ticker = 0;
     output.open("cleaned_data\\Valid Categories.csv");
     output << "appearances, category\n";
@@ -118,8 +123,8 @@ void CleanData()
     std::cout << "Minimum number of refernence to be \"Valid\": " << minimumReferences;
     std::cout << "\nNumber of valid Categories: " << ticker;
 
+    //Create another file to store all valid quotes we can use for main.cpp
     output.open("cleaned_data\\Revised Quotes.txt");
-    
     string demiliter = "_";
     output << "Quote" << demiliter << "Author" << demiliter << "Categories\n";
     ticker = 0;
@@ -144,6 +149,7 @@ void CleanData()
                     break;
             }
 
+        //Cover for any data that may not have an author attributed to it
             if (dataPoint.second.first == "")
                 dataPoint.second.first = "Unknown author";
 
@@ -159,6 +165,8 @@ void CleanData()
     std::cout << "\nData formed by: Quote" << demiliter << "Author" << demiliter << "Categories\n";
 }
 
+//This was made since the Quotes and authors were stored uniquely,quotes often had commas too 
+//while authors could have a book referenced as well so I needed to account for that
 string GetPiece(ifstream* input)
 {
     char temp;

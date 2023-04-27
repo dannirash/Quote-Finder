@@ -1,4 +1,6 @@
 #include "Bplus_Tree.h"
+//Arbitary Value for the max number of keys for B+ Tree. 
+//Made it somewhat large considering the number of categories we have to sort through
 int MAX_KEYS = 11;
 
 Node::Node()
@@ -14,6 +16,7 @@ BplusTree::BplusTree()
 	root = nullptr;
 }
 
+//See if a category is stored in the current B+ Tree
 bool BplusTree::Search(string category)
 {
 	if (root == nullptr)
@@ -51,6 +54,7 @@ bool BplusTree::Search(string category)
 	return false;
 }
 
+//Add to a leaf node more values for the individual category
 bool BplusTree::AddData(string category, string quote, string author)
 {
 	if (root == nullptr)
@@ -85,6 +89,7 @@ bool BplusTree::AddData(string category, string quote, string author)
 	return false;
 }
 
+//Return a vector to be printed out for Output.txt
 vector<pair<string, string>> BplusTree::GetDataForCategory(string category)
 {
 	vector<pair<string, string>> result;
