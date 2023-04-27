@@ -11,7 +11,7 @@ Team Members: Dany Rashwan, Robert Kilkenny, Jane Seo
 
 
 <details>
-<summary>Problem:</summary>
+<summary>##Problem:</summary>
 
 It is often difficult to find a relatable quote to a certain situation on the spot. We are often faced with this problem in storyboarding, workshopping, 
 or just regular conversing. Also, sometimes when we want to quote a prominent figure, we could be faced with this problem and would need to search several websites
