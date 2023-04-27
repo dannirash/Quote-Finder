@@ -1,3 +1,5 @@
+// Copyright [2023] <Dany Rashwan>
+
 void searchMenu() {
   background(bgd[1]);
   fill(0);
@@ -123,10 +125,7 @@ void keyReleased() {
 public void writeToTxt() {
   //writes implementation and category to input.txt
   //debug
-  if(debug)
-    inputTxt = createWriter("C:\\Users\\danni\\OneDrive - University of Florida\\Spring23\\COP3530\\Projects\\Project3\\src\\QuoteFinder\\data\\backend\\input.txt");
-  else
-    inputTxt = createWriter("C:\\Program Files (x86)\\QuoteFinder\\windows-amd64\\data\\backend\\input.txt");
+  inputTxt = createWriter("C:\\Program Files (x86)\\QuoteFinder\\windows-amd64\\data\\backend\\input.txt");
     
   if(loading)
     inputTxt.print("MAP,abbey");
@@ -138,10 +137,7 @@ public void writeToTxt() {
   
   //runs a.exe
   try {
-    if(debug)
-      Runtime.getRuntime().exec("C:\\Users\\danni\\OneDrive - University of Florida\\Spring23\\COP3530\\Projects\\Project3\\src\\QuoteFinder\\data\\backend\\a.exe", null, new File("C:\\Users\\danni\\OneDrive - University of Florida\\Spring23\\COP3530\\Projects\\Project3\\src\\QuoteFinder\\data\\backend"));
-    else
-      Runtime.getRuntime().exec("C:\\Program Files (x86)\\QuoteFinder\\windows-amd64\\data\\backend\\a.exe", null, new File("C:\\Program Files (x86)\\QuoteFinder\\windows-amd64\\data\\backend"));
+    Runtime.getRuntime().exec("C:\\Program Files (x86)\\QuoteFinder\\windows-amd64\\data\\backend\\a.exe", null, new File("C:\\Program Files (x86)\\QuoteFinder\\windows-amd64\\data\\backend"));
   }
   catch (Exception e) {
     e.printStackTrace();
