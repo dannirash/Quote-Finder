@@ -33,12 +33,12 @@ int main()
 			if (end != -1)
 			{
 				string category = OnlyAlphaNumeric(data.substr(start, end - start));
-				/*if (!treeContainer.Search(category))
+				if (!treeContainer.Search(category))
 				{
 					treeContainer.Insert(category);
 					cout << category << ": #" << counter << "\n\n";
 				}
-				treeContainer.AddData(category, quote, author);*/
+				treeContainer.AddData(category, quote, author);
 				mapContainer[category].push_back(make_pair(quote, author));
 				start = end + 1;
 			}
@@ -74,7 +74,7 @@ int main()
 			category = OnlyAlphaNumeric(category);
 
 			vector<pair<string, string>> printThis;
-			if (/*structureName == "MAP" && */oldAsk != data)
+			if (structureName == "MAP" && oldAsk != data)
 			{
 				printThis.clear();
 				cout << "hit\n";
@@ -82,6 +82,16 @@ int main()
 				{
 					cout << "Printing all data for category: " << category << endl;
 					printThis = mapContainer[category];
+				}
+
+			if (structureName == "B+ TREE" && oldAsk != data)
+			{
+				printThis.clear();
+				cout << "hit\n";
+				if (treeContainer.Search(category))
+				{
+					cout << "Printing all data for category: " << category << endl;
+					printThis = treeContainer.GetDataForCategory(category);
 				}
 				else
 				{
@@ -107,7 +117,6 @@ string OnlyAlphaNumeric(string rawData)
 {
 	string result = "";
 	for (char test : rawData)
-		//if (isdigit(test) || isalpha(test))
 		if(test != '-')
 			result += test;
 	return result;
