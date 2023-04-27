@@ -1,5 +1,4 @@
-//Quote Finder -- Dany Rashwan
-Boolean debug = false;
+// Copyright [2023] <Dany Rashwan>
 
 void setup() {
   size(1366, 768);
@@ -16,10 +15,7 @@ void draw() {
 }
 
 void exit() {
-  if(debug)
-    inputTxt = createWriter("C:\\Users\\danni\\OneDrive - University of Florida\\Spring23\\COP3530\\Projects\\Project3\\src\\QuoteFinder\\data\\backend\\input.txt");
-  else
-    inputTxt = createWriter("C:\\Program Files (x86)\\QuoteFinder\\windows-amd64\\data\\backend\\input.txt");
+  inputTxt = createWriter("C:\\Program Files (x86)\\QuoteFinder\\windows-amd64\\data\\backend\\input.txt");
   inputTxt.print("END_PROGRAM,please");
   inputTxt.close();
   super.exit();
