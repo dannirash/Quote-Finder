@@ -1,7 +1,7 @@
 # Quote-Finder
 An application to find Quotes
 
-Team Members: Dany Rashwan, Robert Kilkenny, Jane Seo
+Authors: Dany Rashwan, Robert Kilkenny, Jane Seo
 
 ![mainMenu](https://user-images.githubusercontent.com/61055337/234738135-e9098945-8e31-4611-bf47-10cde0ba14a4.png)
 
